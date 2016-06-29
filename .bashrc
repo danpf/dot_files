@@ -4,19 +4,8 @@
 case $- in
 *i*)
 
-   # Put interactive-only Bourne shell compatible login startup here.
-
-   # Uncomment one or more of the following for paranoid behavior
-
-   #set -o noclobber
-   #alias cp='cp -i'
-   #alias mv='mv -i'
-   #alias rm='rm -i'
-
-   # Uncomment the following if you want traditional behavior
-
-   #unalias vi
-   #unalias ls
+# prompt styling
+export PS1="\A \[$(tput sgr0)\]\[\033[38;5;208m\]\H\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 # general command aliases
 alias ls='pwd && ls -a --color=auto'
