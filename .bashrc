@@ -26,8 +26,6 @@ alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
 
-# ###   hyak only options ###
-
 # setting home directory
 export HOME=/gscratch/dimaio/danpf
 alias luser='cd /usr/lusers/danpf'
@@ -39,5 +37,6 @@ bcros=/gscratch/dimaio/danpf/Rosetta_binchen
 domd=/gscratch/dimaio/danpf/Projects/Domain_density
 pdata=/gscratch/dimaio/danpf/Protein_data
 gitf=/gscratch/dimaio/danpf/git
+home=/gscratch/dimaio/danpf
 
 esac
