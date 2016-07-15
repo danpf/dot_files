@@ -13,8 +13,9 @@ set number
 " set tab prettiness
 set list
 set listchars=tab:\|\ 
-set tabstop=4
-
+set tabstop=2
+set textwidth=120
+set colorcolumn=+1
 " ----------------------------------------
 " ------------ mouse input ---------------
 " ----------------------------------------
