@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/danpf/.oh-my-zsh
+export ZSH=/usr/lusers/danpf/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -82,15 +82,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias chimera=/Applications/Chimera.app/Contents/MacOS/chimera
 alias vi=vim
+
+domd=/gscratch/dimaio/danpf/Projects/Domain_density
+losers=/usr/lusers/danpf
+gitf=/gscratch/dimaio/danpf/git
+pdata=/gscratch/dimaio/danpf/Protein_data
 ptools=~/git/Rosetta/tools/protein_tools
 did=~/git/Rosetta/main/source/src/protocols/electron_density
 pilot=~/git/Rosetta/main/source/src/apps/pilot/binchen
-hh=/Volumes/Hyak
-pdata=/Volumes/Hyak/Protein_data/domain_assembly_benchmark_set
-alias py27=~/anaconda/envs/py27/bin/python 
+
+
 
 # adding functionality to cd into symlinked files
-
+export HOME=/gscratch/dimaio/danpf
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH=$HOME/usr/local/bin:$PATH

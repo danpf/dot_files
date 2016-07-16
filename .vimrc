@@ -36,5 +36,5 @@ set ruler
 " ------ vim to system preferences -------
 " ----------------------------------------
 " this allows better copying to mac system
-set clipboard=unnamed
+set clipboard+=unnamed
 
