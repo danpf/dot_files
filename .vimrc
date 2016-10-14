@@ -1,4 +1,4 @@
-" danny's vimrc file
+" danny's lappytappy vimrc file
 
 " ----------------------------------------
 " ------------ Appearance ----------------
