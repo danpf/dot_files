@@ -6,16 +6,16 @@
 " color by syntax
 syntax enable
 " sets the colorscheme
-colorscheme solarized
-set background=dark
+" colorscheme solarized
+"set background=dark
 "turns on line numbers
 set number
 " set tab prettiness
 set list
 set listchars=tab:\|\ 
 set tabstop=2
-set textwidth=120
-set colorcolumn=+1
+" sets highlight on search
+set hlsearch
 " ----------------------------------------
 " ------------ mouse input ---------------
 " ----------------------------------------

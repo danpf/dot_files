@@ -1,11 +1,17 @@
-# Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation.  export ZSH=/Users/danpf/.oh-my-zsh export PATH=/Users/danpf/Downloads/brew/bin:$PATH export PATH=$PATH:/Users/danpf/anaconda/bin
 export ZSH=/Users/danpf/.oh-my-zsh
+export PATH=/Users/danpf/Downloads/brew/bin:$PATH
+export PATH=$PATH:/Users/danpf/anaconda/bin
+
+unsetopt inc_append_history
+unsetopt share_history
+setopt no_share_history
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="danster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -84,12 +90,33 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias chimera=/Applications/Chimera.app/Contents/MacOS/chimera
 alias vi=vim
+alias wget=/Users/danpf/Downloads/brew/bin/wget
+alias pymol=/Applications/MacPyMOL.app/Contents/MacOS/MacPyMOL
 ptools=~/git/Rosetta/tools/protein_tools
 did=~/git/Rosetta/main/source/src/protocols/electron_density
 pilot=~/git/Rosetta/main/source/src/apps/pilot/binchen
 hh=/Volumes/Hyak
 pdata=/Volumes/Hyak/Protein_data/domain_assembly_benchmark_set
 alias py27=~/anaconda/envs/py27/bin/python 
+alias py35=~/anaconda/envs/py35/bin/python
+
+function emdb() 
+{
+	if [ -z $1 ] ;then
+		echo "Please enter the EMD number!"
+		exit
+	fi
+	
+	wget "ftp://ftp.ebi.ac.uk/pub/databases/emdb/structures/EMD-${1}/map/emd_${1}.map.gz"
+	gzip -dv emd_${1}.map.gz
+
+}
+
+alias bc="bc -l <<<" 
+
+# disables shitty zsh time for good bashrc time
+disable -r time
+alias time='time -p '
 
 # adding functionality to cd into symlinked files
 
