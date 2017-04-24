@@ -6,17 +6,18 @@
 " color by syntax
 syntax enable
 set hlsearch
-" sets the colorscheme
-set background=light
+" 256 color on
+set t_Co=256
+" colorscheme
+hi Visual ctermbg=249
+hi Visual ctermfg=0
 "turns on line numbers
 set number
 " set tab prettiness
 set list
 set listchars=tab:\|\ 
 set tabstop=2
-set shiftwidth=2
 " sets highlight on search
-set hlsearch
 " ----------------------------------------
 " ------------ mouse input ---------------
 " ----------------------------------------
@@ -40,5 +41,5 @@ endif
 " ------ vim to system preferences -------
 " ----------------------------------------
 " this allows better copying to mac system
-set clipboard=unnamedplus
+set clipboard=unnamed
 
