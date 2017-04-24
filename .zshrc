@@ -3,9 +3,12 @@ export ZSH=/Users/danpf/.oh-my-zsh
 export PATH=/Users/danpf/Downloads/brew/bin:$PATH
 export PATH=$PATH:/Users/danpf/anaconda/bin
 
+# Don't share history between tmux sessions 
 unsetopt inc_append_history
 unsetopt share_history
 setopt no_share_history
+setopt noincappendhistory
+setopt nosharehistory
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
