@@ -6,16 +6,16 @@
 " color by syntax
 syntax enable
 " sets the colorscheme
-colorscheme solarized
-set background=dark
+" colorscheme solarized
+set background=light
 "turns on line numbers
 set number
 " set tab prettiness
 set list
 set listchars=tab:\|\ 
 set tabstop=2
-set textwidth=120
-set colorcolumn=+1
+" sets highlight on search
+set hlsearch
 " ----------------------------------------
 " ------------ mouse input ---------------
 " ----------------------------------------
@@ -28,6 +28,7 @@ se mouse+=a
 " this should make your tabbing slightly easier
 set autoindent
 set smartindent
+set shiftwidth=2
 " fix backspace?
 set backspace=indent,eol,start
 set ruler
@@ -36,5 +37,5 @@ set ruler
 " ------ vim to system preferences -------
 " ----------------------------------------
 " this allows better copying to mac system
-set clipboard+=unnamed
+set clipboard=unnamed
 

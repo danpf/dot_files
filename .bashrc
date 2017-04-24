@@ -4,6 +4,9 @@
 case $- in
 *i*)
 
+# function
+backfill() { for job in $(seq 1 $1); do qsub -q bf -W group_list=hyak-dimaio submit.sh; done; }
+
 # prompt styling
 export PS1="\A \[$(tput sgr0)\]\[\033[38;5;208m\]\H\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
@@ -18,7 +21,7 @@ alias 1='cd ~1'                             # Go to pushd 1
 alias 2='cd ~2'                             # Go to pushd 2
 alias 3='cd ~3'                             # Go to pushd 3
 alias 4='cd ~4'
-
+# export PATH=/gscratch/dimaio/danpf/usr/local/bin:$PATH
 # setting home directory
 export HOME=/gscratch/dimaio/danpf
 alias luser='cd /usr/lusers/danpf'

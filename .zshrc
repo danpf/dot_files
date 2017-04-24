@@ -5,7 +5,7 @@ export ZSH=/usr/lusers/danpf/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="danster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -78,13 +78,52 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
+# add gcc location only if available. (deprecated?)
+# gccpath=/opt/rh/devtoolset-2/enable
+# 
+# if [ -f $gccpath ]; then
+# 	source $gccpath
+# 	which gcc
+# fi
+
+
+
+# functions
+bf () {for job in $(seq 1 $1); do qsub -q bfwait submit.pbs; done;}
+dm () {for job in $(seq 1 $1); do qsub -W group_list=hyak-dimaio submit.pbs; done;}
+# bf () {qsub -q bfwait -W group_list=hyak-dimaio submit.pbs}
+cleandir () 
+{
+rm *.log
+rm silent/*
+rm -r *.jugdata/
+rm -r __pycache__/
+rm masterlist
+rm *.csv
+rm *.pbs
+rm jugfile.py
+}
+function getdimaio()
+{
+   if [ -z "$1" -o -z "$2" ]; then
+     echo "Usage: getdimaio [nodes] [hours]"
+     return
+   fi
+   echo "qsub -I -W group_list=hyak-dimaio -l walltime="$2":00:00 -l nodes="$1":ppn=16,mem=100gb,feature=16core"
+   qsub -I -W group_list=hyak-dimaio -l walltime=$2:00:00 -l nodes=$1:ppn=16,mem=100gb,feature=16core
+
+}
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias chimera=/Applications/Chimera.app/Contents/MacOS/chimera
 alias vi=vim
+alias python2.7=/gscratch/dimaio/danpf/usr/local/bin/python2.7
+alias py27=python2.7
+alias python3.5=/gscratch/dimaio/danpf/usr/local/bin/python3.5
+alias py35=python3.5
 
 domd=/gscratch/dimaio/danpf/Projects/Domain_density
 losers=/usr/lusers/danpf
@@ -94,7 +133,17 @@ ptools=~/git/Rosetta/tools/protein_tools
 did=~/git/Rosetta/main/source/src/protocols/electron_density
 pilot=~/git/Rosetta/main/source/src/apps/pilot/binchen
 
+# setting c and cxx variables
+export CC=/gscratch/dimaio/danpf/usr/local/bin/gcc
+export CXX=/gscratch/dimaio/danpf/usr/local/bin/g++
+export CMAKE_C_COMPILER=/gscratch/dimaio/danpf/usr/local/bin/gcc
+export CMAKE_CXX_COMPILER=/gscratch/dimaio/danpf/usr/local/bin/g++
+export LD_LIBRARY_PATH=/gscratch/dimaio/danpf/usr/local/lib64:$LD_LIBRARY_PATH
 
+# hh-suite variables
+export HHLIB=/gscratch/dimaio/danpf/git/hh-suite
+export PATH=${PATH}:${HHLIB}/bin:${HHLIB}/scripts
+alias hhblits='hhblits -d /gscratch/dimaio/danpf/git/hh-suite/databases/uniprot20'
 
 # adding functionality to cd into symlinked files
 export HOME=/gscratch/dimaio/danpf

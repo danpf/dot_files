@@ -1,11 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/danpf/git/dot_files'
-let g:netrw_dirhist_2='/Users/danpf/.ssh'
-let g:netrw_dirhist_3='/Users/danpf/bootcamp/hw/hw_set_2/hw5'
-let g:netrw_dirhist_4='/Users/danpf/git/Rosetta/main/source/src/core/scoring'
-let g:netrw_dirhist_5='/Users/danpf/git/Rosetta/main/source/src/protocols/electron_density'
-let g:netrw_dirhist_6='/Users/danpf/git/Rosetta/main/source/src/apps/pilot/binchen'
-let g:netrw_dirhist_7='/Users/danpf/git/data_parsers/dock_into_density/c_lose_at_15'
-let g:netrw_dirhist_8='/Users/danpf/.matplotlib'
-let g:netrw_dirhist_9='/Users/danpf/git/uw_research_scripts/.git'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/gscratch/dimaio/danpf/Protein_data/hybridize_data/bbsome/results/cm_jugger.jugdata/0b'
+let g:netrw_dirhist_2='/gscratch/dimaio/danpf/relax_into_density'
+let g:netrw_dirhist_3='/gscratch/dimaio/danpf/Projects/bbsome/docking/flipped/temp_delte/unconstrained/final_output'
+let g:netrw_dirhist_4='/gscratch/dimaio/danpf/Projects/bbsome/docking/flipped/temp_delte/unconstrained/silent'
+let g:netrw_dirhist_5='/gscratch/dimaio/danpf/git/Rosetta/dactrl/source/src/apps/pilot/danpf'
