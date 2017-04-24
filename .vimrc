@@ -1,12 +1,12 @@
-" danny's vimrc file
+" danny's lappytappy vimrc file
 
 " ----------------------------------------
 " ------------ Appearance ----------------
 " ----------------------------------------
 " color by syntax
 syntax enable
+set hlsearch
 " sets the colorscheme
-" colorscheme solarized
 set background=light
 "turns on line numbers
 set number
@@ -40,5 +40,5 @@ endif
 " ------ vim to system preferences -------
 " ----------------------------------------
 " this allows better copying to mac system
-set clipboard=unnamed
+set clipboard=unnamedplus
 
