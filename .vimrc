@@ -28,9 +28,14 @@ se mouse+=a
 " this should make your tabbing slightly easier
 set autoindent
 set smartindent
+set shiftwidth=2
 " fix backspace?
 set backspace=indent,eol,start
 set ruler
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
 
 " ----------------------------------------
 " ------ vim to system preferences -------
