@@ -5,7 +5,7 @@ export TERM=screen-256color
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 
 export PATH=/Users/danpf/Downloads/brew/bin:$PATH
-export PATH=$PATH:/Users/danpf/anaconda/bin
+export PATH=/Users/danpf/anaconda/envs/py35/bin:/Users/danpf/anaconda/envs/py27/bin:$PATH
 
 
 function emdb() 
