@@ -44,3 +44,8 @@ endif
 " this allows better copying to mac system
 set clipboard=unnamed
 
+" ----------------------------------------
+" ------ Macros to make you faster -------
+" ----------------------------------------
+
+let @l = 'bifor ( core::Size i = 1; i <= A.size(); ++i ) {}ki		'
