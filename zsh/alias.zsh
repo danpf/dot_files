@@ -8,6 +8,7 @@ alias tmux='tmux -2'
 alias mhyak='sshfs danpf@hyak:/suppscr/dimaio/danpf/ ~/mount/hyak/'
 
 # sshfs digs
+alias sshdigs='ssh danpf@fw.bakerlab.org'
 alias sd='ssh -f danpf@fw.bakerlab.org -L 2222:digs:22 -N'
 alias md='sshfs -p 2222 danpf@localhost:/home/danpf ~/mount/digs'
 

@@ -1,4 +1,4 @@
 
 # to have shift tab reverse autocompletions direction
-bindkey -M menuselect '^[[Z' reverse-menu-complete
+bindkey '^[[Z' reverse-menu-complete
 
