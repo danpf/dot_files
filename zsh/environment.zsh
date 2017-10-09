@@ -3,8 +3,10 @@
 # Tmux stuff
 export TERM=screen-256color
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
+set -o vi
 
-
+export PATH=/home/dan/miniconda3/bin:$PATH
+export PATH=$PATH:~/.local/bin
 ############# KDE SETUP ##################
 # path alterations
 # kdesrc
