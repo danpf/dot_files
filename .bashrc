@@ -22,5 +22,6 @@ alias 4='cd ~4'
 # setting home directory
 alias luser='cd /usr/lusers/danpf'
 
+scl enable devtoolset-4 bash
 
 esac
