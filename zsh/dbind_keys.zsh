@@ -1,4 +1,6 @@
 
+zmodload zsh/complist
+
 # to have shift tab reverse autocompletions direction
-bindkey '^[[Z' reverse-menu-complete
+bindkey -M menuselect '^[[Z' reverse-menu-complete
 
