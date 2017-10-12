@@ -3,12 +3,13 @@
 # Tmux stuff
 export TERM=screen-256color
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
+
+# Vim mode
 set -o vi
 
-export PATH=$PATH:~/.local/bin
-############# KDE SETUP ##################
-# path alterations
-# kdesrc
-export PATH=~/bin/:$PATH
+# Fixing paths
+pathmunge ~/.local/bin
+pathmunge ~/bin
+pathmunge ~/miniconda3/bin
 
 
