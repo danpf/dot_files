@@ -5,7 +5,14 @@ export TERM=screen-256color
 [[ $TMUX = "" ]] && export TERM="xterm-256color"
 
 # Vim mode
-set -o vi
+export KEYTIMEOUT=1
+bindkey -v
+bindkey -v '^?' backward-delete-char
+autoload -U edit-command-line
+# Emacs style
+zle -N edit-command-line
+bindkey '^x' edit-command-line
+
 
 # Fixing paths
 pathmunge ~/.local/bin
