@@ -19,3 +19,9 @@ function getdimaio()
    qsub -I -W group_list=hyak-dimaio -l walltime=$2:00:00 -l nodes=$1:ppn=16,mem=100gb,feature=16core
 
 }
+
+function srd
+{
+	`which python3.6` $HOME/git/dot_files/python/sync_rosetta_dir.py $1
+}
+
