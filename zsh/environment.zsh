@@ -17,6 +17,8 @@ bindkey '^x' edit-command-line
 # Fixing paths
 pathmunge ~/.local/bin
 pathmunge ~/bin
+pathmunge ~/pkg/bin
+pathmunge ~/pkg/sbin
 pathmunge ~/miniconda3/envs/py36/bin
 pathmunge ~/miniconda3/envs/py27/bin
 
