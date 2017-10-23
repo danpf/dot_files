@@ -12,7 +12,7 @@ def s_ci():
     foundimg = False
     for line in p.stdout:
         line = line.decode('utf-8').strip()
-        if 'image/jpg' in line:
+        if 'image/jpg' or 'image/jpeg' in line:
             foundimg = True
     if foundimg:
         pathlib.Path('.images').mkdir(exist_ok=True)
