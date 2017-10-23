@@ -21,6 +21,7 @@ def s_ci():
             p = Popen(['xclip','-selection','clipboard','-t', 'image/jpg', '-o'], stdout=open('.images/0001.jpg','w'))
             ret = p.wait()
             print("wrote clipboard to .images/0001.jpg")
+            print("![alt text](.images/0001.jpg)")
         else:
             prev_imgs = [ int(x.split('/')[-1].split('.')[0]) for x in prev if x.split('/')[-1].split('.')[0].isdigit() and len(x.split('/')[-1].split('.')[0]) == 4 ]
             if len(prev_imgs) != 0:
@@ -28,6 +29,7 @@ def s_ci():
                 p = Popen(['xclip','-selection','clipboard','-t', 'image/jpg', '-o'], stdout=open(f'.images/{prev_max+1:04}.jpg','w'))
                 ret=p.wait()
                 print(f"wrote clipboard to .images/{prev_max+1:04}.jpg")
+                print(f"![alt text](.images/{prev_max+1:04}.jpg)")
     else:
         print("Found no image in clipboard")
     
