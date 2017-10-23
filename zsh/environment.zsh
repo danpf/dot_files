@@ -8,6 +8,7 @@ export TERM=screen-256color
 export KEYTIMEOUT=1
 bindkey -v
 bindkey -v '^?' backward-delete-char
+bindkey '^R' history-incremental-search-backward
 autoload -U edit-command-line
 # Emacs style
 zle -N edit-command-line
