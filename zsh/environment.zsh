@@ -16,6 +16,7 @@ bindkey '^x' edit-command-line
 
 
 # Fixing paths
+pathmunge /snap/bin
 pathmunge ~/.local/bin
 pathmunge ~/bin
 pathmunge ~/pkg/bin
