@@ -15,6 +15,7 @@ set number
 set list
 set listchars=tab:\|\ 
 set tabstop=2
+hi Visual ctermbg=252
 " set colorcolumn=+1
 " ----------------------------------------
 " ------------ mouse input ---------------
@@ -26,9 +27,10 @@ se mouse+=a
 " ---------- vim ease of use -------------
 " ----------------------------------------
 " this should make your tabbing slightly easier
-set autoindent
-set smartindent
-set shiftwidth=2
+filetype indent plugin on
+"set autoindent
+"set smartindent
+"set shiftwidth=2
 " fix backspace?
 set backspace=indent,eol,start
 set ruler
