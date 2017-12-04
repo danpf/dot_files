@@ -11,6 +11,16 @@ alias mhyak='sshfs danpf@hyak:/suppscr/dimaio/danpf/ ~/mount/hyak/'
 alias sshdigs='ssh danpf@fw.bakerlab.org'
 alias sd='ssh -f danpf@fw.bakerlab.org -L 2222:digs:22 -N'
 alias md='sshfs -p 2222 danpf@localhost:/home/danpf ~/mount/digs'
+#function csparc()
+#{
+#	if [ -z "$1" ]; then
+#		echo "Requires digs node argument";
+#		return;
+#	fi
+#	ssh -f danpf@digs -L 3333:
+
+    
+
 
 # submit jobs to hyak
 bf () {for job in $(seq 1 $1); do qsub -q bfwait submit.pbs; done;}
