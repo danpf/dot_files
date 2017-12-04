@@ -6,6 +6,11 @@ alias tmux='tmux -2'
 
 # sshfs hyak
 alias mhyak='sshfs danpf@hyak:/suppscr/dimaio/danpf/ ~/mount/hyak/'
+alias mjup='ssh -N -f -L localhost:8080:localhost:8888 wise'
+# Requires \/
+#Host wise
+#	User danpf
+#	ProxyCommand ssh fw.bakerlab.org -W %h:%p
 
 # sshfs digs
 alias sshdigs='ssh danpf@fw.bakerlab.org'
