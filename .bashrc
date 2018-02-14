@@ -25,3 +25,5 @@ alias luser='cd /usr/lusers/danpf'
 scl enable devtoolset-4 bash
 
 esac
+# Added by cryoSPARC:
+export PATH="/home/danpf/cryosparc/bin":$PATH
