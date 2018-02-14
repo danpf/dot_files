@@ -27,4 +27,7 @@ pathmunge ~/miniconda3/envs/py27/bin
 #Rosetta
 export ROSETTA3=~/Rosetta/master/source/
 
+# Spark
+export PYSPARK_PYTHON=python3
+export PYSPARK_DRIVER_PYTHON=python3
 
