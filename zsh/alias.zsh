@@ -6,7 +6,8 @@ alias tmux='tmux -2'
 
 # sshfs hyak
 alias mhyak='sshfs danpf@hyak:/suppscr/dimaio/danpf/ ~/mount/hyak/'
-alias mjup='ssh -N -f -L localhost:8080:localhost:8888 wise'
+alias mjup='ssh -N -f -L localhost:8080:localhost:8889 wise'
+alias mcs='ssh -N -f -L localhost:8900:localhost:38000 gpu1'
 # Requires \/
 #Host wise
 #	User danpf
