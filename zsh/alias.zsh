@@ -4,6 +4,9 @@
 alias ls='ls -hF --color=auto'
 alias tmux='tmux -2'
 
+# jupyter lab
+alias jl='jupyter lab --ContentsManager.allow_hidden=True'
+
 # sshfs hyak
 alias mhyak='sshfs danpf@hyak:/suppscr/dimaio/danpf/ ~/mount/hyak/'
 alias mjup='ssh -N -f -L localhost:8080:localhost:8889 wise'

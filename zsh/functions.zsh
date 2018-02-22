@@ -22,6 +22,6 @@ function getdimaio()
 
 function srd
 {
-	`which python3.6` $HOME/git/dot_files/python/sync_rosetta_dir.py $1
+	`which python3.6` $HOME/git/dot_files/python/sync_rosetta_dir.py ${@:1}
 }
 
