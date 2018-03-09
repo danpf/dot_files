@@ -14,6 +14,9 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '^x' edit-command-line
 
+# digs fixes?
+export OPENBLAS_NUM_THREADS=1
+
 
 # Fixing paths
 pathmunge /snap/bin
@@ -25,7 +28,8 @@ pathmunge ~/miniconda3/envs/py36/bin
 pathmunge ~/miniconda3/envs/py27/bin
 
 #Rosetta
-export ROSETTA3=~/Rosetta/master/source/
+export ROSETTA3=~/git/Rosetta/master
+pathmunge ~/cryosparc/bin
 
 # Spark
 export PYSPARK_PYTHON=python3

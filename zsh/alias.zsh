@@ -4,6 +4,9 @@
 alias ls='ls -hF --color=auto'
 alias tmux='tmux -2'
 
+# jupyter lab
+alias jl='jupyter lab --ContentsManager.allow_hidden=True'
+
 # sshfs hyak
 alias mhyak='sshfs danpf@hyak:/suppscr/dimaio/danpf/ ~/mount/hyak/'
 alias mjup='ssh -N -f -L localhost:8080:localhost:8889 wise'
@@ -18,9 +21,22 @@ alias sshdigs='ssh danpf@fw.bakerlab.org'
 alias sd='ssh -f danpf@fw.bakerlab.org -L 2222:digs:22 -N'
 alias md='sshfs -p 2222 danpf@localhost:/home/danpf ~/mount/digs'
 
+
+function csparc()
+{
+	if [ -z "$1" ]; then
+		echo "Requires digs node argument";
+		return;
+	fi
+	ssh -N -f -L :localhost:8082:[::1]:3800 $1
+}
+
+    
+
+
 # submit jobs to hyak
-bf () {for job in $(seq 1 $1); do qsub -q bfwait submit.pbs; done;}
-dm () {for job in $(seq 1 $1); do qsub -W group_list=hyak-dimaio submit.pbs; done;}
+bf () {sbatch -p backfill submit.slurm}
+dm () {sbatch -p dimaio submit.slurm}
 
 
 # Function needs to be before alias
