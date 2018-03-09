@@ -27,10 +27,14 @@ se mouse+=a
 " ---------- vim ease of use -------------
 " ----------------------------------------
 " this should make your tabbing slightly easier
-filetype indent plugin on
+filetype on
+filetype plugin on
+filetype indent on
+
 set autoindent
 set smartindent
-set shiftwidth=2
+set shiftwidth=4
+set tabstop=4
 " fix backspace?
 set backspace=indent,eol,start
 set ruler
