@@ -6,6 +6,7 @@ case $- in
 
 # prompt styling
 export PS1="\A \[$(tput sgr0)\]\[\033[38;5;208m\]\H\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="#: "
 
 # general command aliases
 alias ls='pwd && ls -a --color=auto'
@@ -27,3 +28,5 @@ scl enable devtoolset-4 bash
 esac
 # Added by cryoSPARC:
 export PATH="/home/danpf/cryosparc/bin":$PATH
+# Added by cryoSPARC:
+export PATH="/home/danpf/cryosparc2_master/bin":$PATH

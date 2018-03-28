@@ -9,6 +9,15 @@ function getpdb
 	fi
 }
 
+function getcpdb
+{
+	echo "Downloading " ${1} "... "
+	python3.6 -c "import sys; sys.path.append('/home/danpf/git/uw_research_scripts/modeling/'); import util;f = open('${1}.pdb','w'); f.write(util.get_chain_rawpdb('${1}', None, idx_at_0=True, keep_het=False));f.close()"
+	if [[ $? != 0 ]]; then
+		echo "===>  $pdbid doesn't exist !  <==="
+	fi
+}
+
 function getdimaio()
 {
    if [ -z "$1" -o -z "$2" ]; then
