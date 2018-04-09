@@ -11,6 +11,7 @@ set hlsearch
 " set background=dark
 "turns on line numbers
 set number
+set relativenumber
 " set tab prettiness
 set list
 set listchars=tab:\|\ 
