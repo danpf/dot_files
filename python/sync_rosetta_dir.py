@@ -4,6 +4,7 @@ import os
 import sys
 import subprocess
 import argparse
+import time
 
 def parseargs():
     parser = argparse.ArgumentParser()
@@ -46,6 +47,7 @@ def build_static():
     os.chdir("../")
 
 def get_oriented():
+    t = time.time()
     args = parseargs()
     pwd = os.getcwd()
     pwd_sp = pwd.split('/')
@@ -63,6 +65,7 @@ def get_oriented():
     os.chdir("/".join(pwd_sp[:dist_idx]))
     build_static()
     sync_with_digs(args.exes, dist)
+    print(f"total time to sync: {time.time()-t:1.1f} seconds.")
     #sync_with_hyak(exe, dist) # NOT SET UP FOR MULTI
 
 if len(sys.argv) < 2:
