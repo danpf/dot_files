@@ -25,3 +25,17 @@ function srd
 	`which python3.6` $HOME/git/dot_files/python/sync_rosetta_dir.py ${@:1}
 }
 
+function csparc()
+{
+	if [ -z "$1" ]; then
+		echo "Requires digs node argument";
+		return;
+	fi
+	ssh -N -f -L :localhost:8082:[::1]:3800 $1
+}
+
+function kvpn()
+{
+	sudo service network-manager stop
+	sudo service network-manager start
+}

@@ -21,19 +21,6 @@ alias sshdigs='ssh danpf@fw.bakerlab.org'
 alias sd='ssh -f danpf@fw.bakerlab.org -L 2222:digs:22 -N'
 alias md='sshfs -p 2222 danpf@localhost:/home/danpf ~/mount/digs'
 
-
-function csparc()
-{
-	if [ -z "$1" ]; then
-		echo "Requires digs node argument";
-		return;
-	fi
-	ssh -N -f -L :localhost:8082:[::1]:3800 $1
-}
-
-    
-
-
 # submit jobs to hyak
 bf () {sbatch -p backfill submit.slurm}
 dm () {sbatch -p dimaio submit.slurm}
