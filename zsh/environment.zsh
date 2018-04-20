@@ -28,8 +28,8 @@ pathmunge ~/miniconda3/envs/py36/bin
 pathmunge ~/miniconda3/envs/py27/bin
 
 #Rosetta
-export ROSETTA3=~/git/Rosetta/master
-pathmunge ~/cryosparc/bin
+export ROSETTA3=~/git/Rosetta/master/
+pathmunge ~/cryosparc_g2/bin
 
 # Spark
 export PYSPARK_PYTHON=python3
