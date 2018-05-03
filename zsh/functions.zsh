@@ -56,9 +56,23 @@ function ac3()
 	cd -
 }
 
+function dc3()
+{
+	cd ~/miniconda3/bin/
+	source deactivate py36
+	cd -
+}
+
 function ac2()
 {
 	cd ~/miniconda3/bin/
 	source activate py27
+	cd -
+}
+
+function dc2()
+{
+	cd ~/miniconda3/bin/
+	source deactivate py27
 	cd -
 }
