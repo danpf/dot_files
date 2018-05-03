@@ -48,3 +48,17 @@ function kvpn()
 	sudo service network-manager stop
 	sudo service network-manager start
 }
+
+function ac3()
+{
+	cd ~/miniconda3/bin/
+	source activate py36
+	cd -
+}
+
+function ac2()
+{
+	cd ~/miniconda3/bin/
+	source activate py27
+	cd -
+}

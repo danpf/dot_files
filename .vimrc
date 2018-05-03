@@ -106,13 +106,13 @@ endfunction
 " ----------------------------------------
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 "call plug#begin('~/.local/share/nvim/plugged')
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'w0rp/ale'
 "Plug 'plugins/test_plugin'
 "Plug '~/git/mmtf-vim'
 "Plug 'Yggdroot/indentLine'
 "Plug 'nathanaelkane/vim-indent-guides'
-"call plug#end()
+call plug#end()
 "let g:indent_guides_enable_on_vim_startup = 1
 "let g:indent_guides_guide_size = 1
 
@@ -123,7 +123,3 @@ let g:ale_python_flake8_options = '--max-line-length=120'
 let g:ale_python_pylint_options = '--max-line-length=120'
 "let g:ale_python_flake8_args = '--ignore=E501 --max-line-length=120'
 "let ale_python_flake8_options = '--ignore=E501 --max-line-length=120'
-"let g:ale_python_flake8_args = '--ignore=E501 --max-line-length=120'
-
-
-
