@@ -77,7 +77,7 @@ function! CompareLines(...)
 	else
 		echom "bad number of arguments"
 		return;
-	endif
+	endifk
 
 	" Get the content of the lines
 	let line1 = getline(l1)
@@ -106,6 +106,8 @@ endfunction
 " ----------------------------------------
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 "call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'w0rp/ale'
 "Plug 'plugins/test_plugin'
 "Plug '~/git/mmtf-vim'
 "Plug 'Yggdroot/indentLine'
@@ -113,5 +115,15 @@ autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 "call plug#end()
 "let g:indent_guides_enable_on_vim_startup = 1
 "let g:indent_guides_guide_size = 1
+
+"let b:ale_linkers = ['flake8', 'pylint']
+let b:ale_linkers = ['flake8', 'pylint']
+"let g:ale_python_flake8_options = ''
+let g:ale_python_flake8_options = '--max-line-length=120'
+let g:ale_python_pylint_options = '--max-line-length=120'
+"let g:ale_python_flake8_args = '--ignore=E501 --max-line-length=120'
+"let ale_python_flake8_options = '--ignore=E501 --max-line-length=120'
+"let g:ale_python_flake8_args = '--ignore=E501 --max-line-length=120'
+
 
 
