@@ -3,6 +3,8 @@
 # General ease of use
 alias ls='ls -hF --color=auto'
 alias tmux='tmux -2'
+alias py36='~/miniconda3/envs/py36/bin/python'
+alias py27='~/miniconda3/envs/py27/bin/python'
 
 # jupyter lab
 alias jl='jupyter lab --ContentsManager.allow_hidden=True'
