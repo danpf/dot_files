@@ -104,7 +104,9 @@ endfunction
 " ----------------------------------------
 " ------------ Appearance ----------------
 " ----------------------------------------
-call plug#begin('~/.local/share/nvim/plugged')
+autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+"call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'w0rp/ale'
 "Plug 'plugins/test_plugin'
 "Plug '~/git/mmtf-vim'
@@ -121,7 +123,3 @@ let g:ale_python_flake8_options = '--max-line-length=120'
 let g:ale_python_pylint_options = '--max-line-length=120'
 "let g:ale_python_flake8_args = '--ignore=E501 --max-line-length=120'
 "let ale_python_flake8_options = '--ignore=E501 --max-line-length=120'
-"let g:ale_python_flake8_args = '--ignore=E501 --max-line-length=120'
-
-
-
