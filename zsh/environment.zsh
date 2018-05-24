@@ -24,8 +24,8 @@ pathmunge ~/.local/bin
 pathmunge ~/bin
 pathmunge ~/pkg/bin
 pathmunge ~/pkg/sbin
-pathmunge ~/miniconda3/envs/py36/bin
-pathmunge ~/miniconda3/envs/py27/bin
+pathmunge ~/miniconda3/envs/py3/bin
+pathmunge ~/miniconda3/envs/py2/bin
 
 #Rosetta
 export ROSETTA3=~/git/Rosetta/master/
