@@ -77,7 +77,7 @@ function! CompareLines(...)
 	else
 		echom "bad number of arguments"
 		return;
-	endifk
+	endif
 
 	" Get the content of the lines
 	let line1 = getline(l1)

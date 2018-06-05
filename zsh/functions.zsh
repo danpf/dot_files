@@ -49,6 +49,14 @@ function kvpn()
 	sudo service network-manager start
 }
 
+function kmdigs()
+{
+	sudo umount -l ~/mount/digs
+	lsof -ti:2222 | xargs kill
+	sd
+	md
+}
+
 function ac3()
 {
 	cd ~/miniconda3/bin/
@@ -76,3 +84,9 @@ function dc2()
 	source deactivate py27
 	cd -
 }
+function rdm()
+{
+	fff=$PWD
+	ssh digs "zsh -c 'cd \"$PWD\" && sbatch -p dimaio submit.slurm'"
+}
+
