@@ -60,28 +60,28 @@ function kmdigs()
 function ac3()
 {
 	cd ~/miniconda3/bin/
-	source activate py36
+	source activate py3
 	cd -
 }
 
 function dc3()
 {
 	cd ~/miniconda3/bin/
-	source deactivate py36
+	source deactivate py3
 	cd -
 }
 
 function ac2()
 {
 	cd ~/miniconda3/bin/
-	source activate py27
+	source activate py2
 	cd -
 }
 
 function dc2()
 {
 	cd ~/miniconda3/bin/
-	source deactivate py27
+	source deactivate py2
 	cd -
 }
 function rdm()

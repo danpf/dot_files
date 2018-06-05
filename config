@@ -1,0 +1,59 @@
+Host nrb nrb
+	User robetta
+	HostName nrb
+	ControlPath ~/.ssh/master-%r@%h:%p
+	ControlMaster auto
+	ForwardX11 yes
+	Compression yes
+Host hyak hyak.washington.edu
+	User danpf
+	HostName hyak.washington.edu
+	ControlPath ~/.ssh/master-%r@%h:%p
+	ControlMaster auto
+	ControlPersist yes
+	ForwardX11 yes
+	Compression yes
+Host blfw fw.bakerlab.org 
+	User danpf
+	HostName fw.bakerlab.org
+	ControlPath ~/.ssh/master-%r@%h:%p
+	ControlMaster auto
+	ControlPersist yes
+	ForwardX11 yes
+	Compression yes
+Host wise wise:
+	User danpf
+	HostName wise
+	ControlPath ~/.ssh/master-%r@%h:%p
+	ControlMaster auto
+	ControlPersist yes
+	ForwardX11 yes
+	Compression yes
+	ProxyJump blfw
+Host digs digs:
+	User danpf
+	HostName digs
+	ControlPath ~/.ssh/master-%r@%h:%p
+	ControlMaster auto
+	ControlPersist yes
+	ForwardX11 yes
+	Compression yes
+	ProxyJump blfw
+Host basil
+	HostName 10.1.64.64
+	User dfarrell
+	ControlPath ~/.ssh/master-%r@%h:%p
+	ControlMaster auto
+	ControlPersist yes
+	ForwardX11 yes
+	Compression yes
+Host *
+    ServerAliveInterval 300
+    ServerAliveCountMax 2
+#Host gpu1
+#	User danpf
+#	ProxyCommand ssh digs -W %h:%p
+#Host gpu2
+#	User danpf
+#	ProxyCommand ssh digs -W %h:%p
+
